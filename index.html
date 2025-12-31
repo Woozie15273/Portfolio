@@ -1,0 +1,364 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wu Tech Consulting Limited</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  </head>
+  
+  <body 
+        data-bs-spy="scroll" data-bs-target="#navbarNav" 
+        data-bs-offset="70" tabindex="0">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
+        <div class="container-fluid">            
+            <a class="navbar-brand" href="#hero">Wu Tech Consulting Limited</a>
+            
+            <button class="navbar-toggler" type="button" 
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" 
+                    aria-label="Toggle navigation"> 
+                <span class="navbar-toggler-icon"></span> 
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="bg-dark text-white vh-100 d-flex align-items-center justify-content-center" 
+            role="banner" aria-label="Hero section showcasing portfolio introduction">      
+        <div class="container-fluid text-center" id="hero" 
+                style="scroll-margin-top: 70px;">
+            <h1>Jesse Wu</h1>
+            <p class="lead">Remote QA automation expertise, proven in Canadian public health sector.</p>
+            <a href="#portfolio" class="btn btn-info btn-lg" aria-label="View my portfolio work">View My Work</a>
+        </div>
+    </header>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-5 bg-light text-center"> 
+        <div class="container"> 
+            <h2 class="mb-4">Portfolio</h2>
+            
+            <!-- Filter -->
+            <div class="mb-4" id="filter-container">                
+            </div>
+
+            <!-- Entries Grid -->
+            <div class="row g-4" id="portfolio-grid">
+                
+                <portfolio-card 
+                    title="Fake Customer Unpaid For Testimonial" 
+                    category="Java, Selenium, GitHub Actions" 
+                    icon="bi-person-vcard" 
+                    link="https://github.com/Woozie15273/FakeCustomerUnpaidForTestimonial"> 
+                </portfolio-card>
+
+                <portfolio-card 
+                    title="Fakestore API Automation Framework" 
+                    category="Python, Playwright, API, GitHub Actions" 
+                    icon="bi-shop-window" 
+                    link="https://github.com/Woozie15273/Playwright_API_Exercises"> 
+                </portfolio-card>
+
+                <portfolio-card 
+                    title="Try-SQL Editor Automation Framework" 
+                    category="Python, Playwright, SQL" 
+                    icon="bi-database-exclamation" 
+                    link="https://github.com/Woozie15273/Playwright_SQL_Exercises"> 
+                </portfolio-card>
+                
+                <portfolio-card 
+                    title="HCIM Automation" 
+                    category="Python, Selenium" 
+                    icon="bi-binoculars" 
+                    link="https://github.com/Woozie15273/HCIM_automation_demo"> 
+                </portfolio-card>
+
+                <portfolio-card 
+                    title="&quot;Tell Me About Yourself&quot;"
+                    category="Articulate Storyline"
+                    icon="bi-person-walking" 
+                    link="https://woozie15273.github.io/tell-me-about-yourself/"> 
+                </portfolio-card>
+
+                <portfolio-card 
+                    title="Mixology E-learning Game" 
+                    category="Articulate Storyline" 
+                    icon="bi-cup-straw" 
+                    link="https://woozie15273.github.io/Prototype-Mixology-E-learning-Game/"> 
+                </portfolio-card>
+                
+            </div>
+        </div> 
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 text-center"> 
+        <div class="container"> 
+            <h2 class="mb-4">Contact</h2>
+            <div class="d-flex justify-content-center gap-4">
+                <a href="mailto:jessewu323@gmail.com" 
+                    class="btn btn-outline-dark d-flex align-items-center gap-2" 
+                    aria-label="Direct Email"> 
+                    <i class="bi bi-envelope fs-4"></i>
+                    <span>Direct Email</span>
+                </a>
+
+                <button class="btn btn-outline-dark d-flex align-items-center gap-2" 
+                    aria-label="Copy Email"
+                    id="copyEmailBtn"
+                    onclick="copyEmail()"> 
+                    <i class="bi bi-clipboard"></i>
+                    <span>Copy Email</span>
+                </button>
+
+                <a href="https://www.linkedin.com/in/ziping-jesse-wu/" 
+                    class="btn btn-outline-dark d-flex align-items-center gap-2" 
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">
+                    <i class="bi bi-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>                
+            </div>            
+        </div> 
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-5 bg-light text-center" 
+            role="region" aria-labelledby="about-title">
+        <div class="container">
+            <h2 id="about-title">About My Expertise</h2>
+            <div>
+                <p>I partner with technology companies and agile teams to achieve 
+                    <br> <strong>exceptional product reliability</strong> and <strong>operational efficiency</strong> 
+                    <br> through automation and quality assurance.</p>
+    
+                <p>My work spans from <em>enterprise-grade web testing frameworks</em> to <em>streamlined office workflows</em>. 
+                    <br>Every solution I deliver is designed to:</p>
+
+                <ul class="list-unstyled">
+                <li>Prevent costly defects before they reach production</li>
+                <li>Save critical time with scalable automation</li>
+                <li>Boost team confidence through clean, reliable processes</li>
+                </ul>
+                
+                <p>With nearly <strong>3 years of discipline honed in the Canadian public health sector</strong>, 
+                    <br> I bring proven, high-stakes expertise to projects where reliability truly matters.</p>
+                    
+                <p>Whether you’re launching fast, scaling up, or automating the routine, 
+                    <br> I ensure your code works — and your team works smarter.</p>
+                
+                <p><strong>Remote-ready. Results-driven.</strong> Let’s build reliability into your next release.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3" role="contentinfo">
+        <div> 
+            <small>Since 2025 | 
+                <a 
+                href="https://www.linkedin.com/company/109629900" 
+                target="_blank" rel="noopener noreferrer">
+                Wu Tech Consulting Limited</a> |
+                Appreciate <a 
+                href="https://getbootstrap.com/" 
+                target="_blank" rel="noopener noreferrer">
+                Bootstrap's</a> splendid framework
+            </small>
+        </div>
+    </footer>
+
+    <!-- Portfolio Card Template --> 
+    <template id="portfolio-card-template"> 
+        <div class="card h-100 shadow-sm text-center"> 
+            <div class="card-icon display-4 my-3"></div> 
+            <div class="card-body"> 
+                <h5 class="card-title"></h5> 
+                <p class="card-text text-muted small"></p> 
+                <a href="#" class="btn btn-outline-primary btn-sm">View Project</a> 
+            </div> 
+        </div> 
+    </template>
+
+    <!-- Portfolio Filter Template --> 
+    <template id="portfolio-filter-template"> 
+        <div class="d-flex flex-wrap gap-3 justify-content-center" role="group" aria-label="Portfolio category filters"> 
+            <!-- Buttons will be injected dynamically --> 
+            </div> 
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <script>
+        // Shortly alter the element text to provide a reaction implying the copy succeed. 
+        function copyEmail() {
+            const EMAIL = "jessewu323@gmail.com";
+            const btnText = document.querySelector('#copyEmailBtn span');
+            const beforeText = "Copy Email";
+            const afterText = "Copied!";
+
+            navigator.clipboard.writeText(EMAIL).then(() => {
+                btnText.textContent = afterText;
+                setTimeout(() => { btnText.textContent = beforeText;}, 2000);
+            });
+        }
+
+        // To populate web component for filters
+        class PortfolioFilter extends HTMLElement {
+            connectedCallback() {
+                // Cache cards and their categories once
+                this.cards = [...document.querySelectorAll('#portfolio-grid portfolio-card')];
+                this.cardCategories = new Map(
+                this.cards.map(card => [
+                    card,
+                    card.getAttribute('category')
+                        .split(',')
+                        .map(c => c.trim())
+                ])
+                );
+
+                this.renderFilters();
+            }
+
+            renderFilters() {
+                // Collect unique categories
+                const categories = [...new Set(this.cards.flatMap(card => this.cardCategories.get(card)))];
+                
+                // Sort alphabetically (case-insensitive) 
+                categories.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+
+                // If no categories, hide filter bar
+                if (categories.length === 0) {
+                this.style.display = 'none';
+                return;
+                }
+
+                // Clone template into light DOM
+                const template = document.getElementById('portfolio-filter-template');
+                this.innerHTML = '';
+                this.appendChild(template.content.cloneNode(true));
+
+                const btnGroup = this.querySelector('[role="group"]');
+
+                // Add "All" button
+                btnGroup.appendChild(this.#createButton('All', true));
+
+                // Add category buttons
+                categories.forEach(cat => {
+                btnGroup.appendChild(this.#createButton(cat));
+                });
+            }
+
+            // --- Private Helpers ---
+            #createButton(label, active = false) {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = `btn btn-outline-success btn-sm ${active ? 'active' : ''}`;
+                btn.textContent = label;
+                btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+
+                btn.addEventListener('click', () => {
+                this.#filterCards(label);
+
+                // Update active state
+                this.querySelectorAll('button').forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-pressed', 'false');
+                });
+                btn.classList.add('active');
+                btn.setAttribute('aria-pressed', 'true');
+                });
+
+                return btn;
+            }
+
+            #filterCards(category) {
+                this.cardCategories.forEach((cats, card) => {
+                card.style.display = (category === 'All' || cats.includes(category)) ? '' : 'none';
+                });
+            }
+            }
+
+        // To populate web component for cards
+        class PortfolioCard extends HTMLElement {           
+            connectedCallback() {
+                const template = document.getElementById("portfolio-card-template");
+                const node = template.content.cloneNode(true);
+
+                this.#renderIcon(node);
+                this.#renderTitle(node);
+                this.#renderCategories(node);
+                this.#renderLink(node);
+
+                this.appendChild(node);
+
+                this.classList.add("col-md-4");
+            }
+
+            // --- Private helpers ---
+            #renderIcon(node) {
+                const iconName = this.getAttribute("icon");
+                node.querySelector(".card-icon").innerHTML = `<i class="bi ${iconName}"></i>`;
+            }
+
+            #renderTitle(node) {
+                node.querySelector(".card-title").textContent = this.getAttribute("title");
+            }
+
+            #renderCategories(node) {
+                const categories = (this.getAttribute("category") || "")
+                    .split(",")
+                    .map(c => c.trim())
+                    .filter(Boolean);
+
+                const categoryContainer = node.querySelector(".card-text");
+                categoryContainer.innerHTML = "";
+
+                categories.forEach(cat => {
+                    categoryContainer.appendChild(this.#createCategoryBadge(cat));
+                });
+            }
+
+            #createCategoryBadge(text) {
+                const span = document.createElement("span");
+                span.classList.add("badge", "bg-secondary", "me-1");
+                span.textContent = text;
+                return span;
+            }
+
+            #renderLink(node) {
+                const anchor = node.querySelector("a");
+                anchor.href = this.getAttribute("link");
+                anchor.target = "_blank";
+                anchor.rel = "noopener noreferrer";
+            }
+        }
+        
+        customElements.define("portfolio-card", PortfolioCard);
+        customElements.define('portfolio-filter', PortfolioFilter);
+
+        // On DOM ready, mount filter into #filter-container 
+        document.addEventListener('DOMContentLoaded', () => { 
+            const filterContainer = document.getElementById('filter-container'); 
+            const filter = document.createElement('portfolio-filter'); 
+            filterContainer.appendChild(filter); 
+        });
+
+    </script>   
+
+    </body>
+</html>
